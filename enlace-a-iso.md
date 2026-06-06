@@ -1,21 +1,33 @@
-# Auditoría de Seguridad y Cumplimiento: Framework ISO 27001/2 & GDPR
+# Auditoría de Seguridad y Cumplimiento (ISO 27001/2 & GDPR)
 
-**Objetivo:** Evaluar y fortalecer la postura de seguridad de la infraestructura perimetral e interna de la organización, asegurando el cumplimiento de normativas internacionales de protección de datos.
+**Headline:** Diseño, ejecución y gestión de auditoría interna de controles lógicos y físicos para evaluar la madurez operativa y mitigar riesgos normativos.
 
-### 1. Inventario y Control de Accesos (ISO A.5, A.8 y A.9)
-* **Relevamiento de Activos:** Ejecución de un mapeo completo de hardware, software y servidores, logrando una visibilidad total de la red.
-* **Identity & Access Management (IAM):** Implementación de un esquema de roles bajo el Principio de Mínimo Privilegio. Se auditaron y revocaron accesos de ex-empleados y se evaluó la integración de Autenticación Multifactor (MFA).
+---
 
-### 2. Privacidad y Datos Sensibles (GDPR)
-* Diseño e implementación de un checklist de auditoría para Información de Identificación Personal (PII).
-* Análisis de métodos de cifrado, políticas de backup y aseguramiento de los flujos de envío de información confidencial para mitigar riesgos legales.
+### 1. El Desafío (Contexto de Auditoría)
+La organización requería evaluar su postura de seguridad actual frente a amenazas crecientes (como incidentes de Ransomware y fugas de datos), buscando estructurar sus procesos internos bajo un marco normativo reconocido internacionalmente (ISO 27001) para garantizar la Confidencialidad, Integridad y Disponibilidad de sus activos.
 
-### 3. Hardening y Seguridad de Red (ISO A.11 y A.13)
-* **Segmentación:** Auditoría de controles de acceso físico al servidor (UPS, cámaras) y segmentación lógica de la red mediante VLANs y redes de invitados.
-* **Defensa Perimetral:** Ejecución de tareas de hardening en gateways (FiberHome). Se deshabilitaron protocolos inseguros (Telnet, FTP, HTTP) forzando la migración a HTTPS, y se configuraron Firewalls con inspección profunda de paquetes (SPI) en modo sigilo.
+### 2. La Acción (Ejecución del Plan Integral)
+Se diseñó un plan de auditoría integral orquestado mediante tableros ágiles (Trello), segmentando la revisión en los dominios críticos de la norma ISO 27001:
 
-### 4. Resiliencia y Continuidad del Negocio (ISO A.17)
-* Desarrollo de la documentación base para la respuesta ante crisis corporativas.
-* Redacción de borradores para un **Plan de Respuesta ante Incidentes (IRP)** y un **Plan de Continuidad de Negocio (BCP)** enfocados en casos de pérdida total (ej. incendios o robo de equipamiento crítico).
+* **Inventario y Clasificación de Activos (A.5 y A.8):** Relevamiento exhaustivo de hardware, software y mapeo topológico básico de red. Se identificaron y clasificaron los Datos de Carácter Personal (PII) bajo criterios GDPR.
+* **Gestión de Identidad y Accesos - IAM (A.9):** Auditoría de usuarios, roles y permisos bajo el **Principio de Mínimo Privilegio**. Se revisaron políticas de contraseñas, implementación de Autenticación Multifactor (MFA) y procesos de desvinculación (revocación de accesos a ex-empleados).
+* **Seguridad Física y Ambiental (A.11):** Inspección de los controles de acceso al cuarto de servidores (barreras, CCTV, sistemas UPS, controles ambientales) y revisión de prácticas de escritorio limpio (protección de documentos físicos y Custodia de Evidencia Legal).
+* **Gestión de Incidentes y Continuidad (A.17):** Formulación de borradores y lineamientos para un Plan de Respuesta ante Incidentes (IRP) frente a robos y un Plan de Continuidad de Negocio (BCP) en caso de desastres físicos (incendios).
 
-**Herramientas y Estándares:** `ISO/IEC 27001` | `ISO/IEC 27002` | `GDPR` | `Nmap` | `Hardening de Sistemas`
+### 3. El Impacto (Resultados y Gobernanza)
+La auditoría permitió visibilizar el nivel de madurez real del Sistema de Gestión de Seguridad de la Información (SGSI). A través de la elaboración de una matriz de riesgos (Probabilidad x Impacto), se logró priorizar las vulnerabilidades críticas y trazar un plan de acción (*roadmap*) para la remediación de brechas técnicas y procedimentales.
+
+---
+
+### 📋 Muestra de Gestión Documental (Tablero de Auditoría)
+
+*(Nota: En un entorno de auditoría real, el registro estructurado de la evidencia es tan crítico como el hallazgo en sí).*
+
+**Dominios Evaluados (Fragmento):**
+1. **Controles Físicos:** ¿Quién ingresa al servidor? / Presencia de CCTV / Políticas de escritorio limpio.
+2. **Roles y Accesos:** Control de carpetas compartidas / Detección de cuentas huérfanas / Implementación MFA.
+3. **GDPR / Riesgo de PII:** Identificación de métodos de respaldo / Evaluación de canales de transmisión (Cifrado vs. Envío por mail en texto plano).
+
+---
+**Marcos y Estándares Aplicados:** *ISO/IEC 27001:2022 | ISO/IEC 27002 | GDPR | Gestión de Riesgos | Defensa en Profundidad | Controles Lógicos (MAC/DAC/RBAC).*
